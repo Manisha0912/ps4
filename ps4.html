@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//1.Remove duplicates in an array.
+let num = [1, 2, 3, 2, 4, 3, 5, 1];
+let arr = [];
+let obj = {}; 
+
+for (let i = 0; i < num.length; i++) {
+    if (!obj[num[i]]) {
+        arr.push(num[i]);
+        obj[num[i]] = true; 
+    }
+}
+
+console.log(arr); 
+
+
+// 2. Count the number of occurrences  elements in an array and display in an object.
+
+let array = [1, 2, 3, 2, 4, 3, 5, 1, 3, 4, 4];
+let countObj = {}; 
+
+
+for (let i = 0; i < array.length; i++) {
+    let element = array[i];
+
+    // If the element is already in the object, increment its count
+    if (countObj[element]) {
+        countObj[element]++;
+    } else {
+        // If the element is not in the object, initialize its count to 1
+        countObj[element] = 1;
+    }
+}
+
+console.log(countObj);
+
+    </script>
+</body>
+</html>
